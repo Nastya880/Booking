@@ -4,12 +4,15 @@ $color-default-white:               #ffffff;
 $color-wild-watermelon:             #ff4b77;
 $color-razzmatazz:                  #f91155;
 $color-dark-white:                  rgba(255, 255, 255, 0.20);
+$color-half-white:                  rgba(255, 255, 255, 0.50);
 $color-vulcan:                      #3c3e43;
+$color-nobel:                       #999;
+$color-illusion:                    #ff97b0;
 
 $grey-to-black:                     linear-gradient(180deg, rgba(10, 34, 64, 0.10) 0%, #0A2240 100%);
 
-$ff-roboto:                            "Roboto", "Arial", sans-serif;
-$ff-open-sans:                         "OpenSans", "Arial", sans-serif;
+$ff-roboto:                         "Roboto", "Arial", sans-serif;
+$ff-open-sans:                      "OpenSans", "Arial", sans-serif;
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
 $tf-default:                        ease;

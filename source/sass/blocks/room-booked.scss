@@ -1,0 +1,24 @@
+.room__booked {
+  min-height: 96px;
+  padding: 25px 105px 29px 105px;
+  background-color: $color-vulcan;
+  @include font($ff-open-sans, 400, 14px, $color-default-white, 21px);
+  text-align: center;
+  // display: none;
+}
+
+.room__booked-link {
+  color: $color-wild-watermelon;
+
+  text-decoration: none;
+  &:visited {
+    color: $color-illusion;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color-illusion;
+    text-decoration: none;
+  }
+}

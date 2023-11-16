@@ -1,0 +1,74 @@
+.room__info {
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 0 26px 0 24px;
+
+  @include vp-1279 {
+    padding-bottom: 7px;
+  }
+
+  @include vp-767 {
+    padding: 21px;
+  }
+}
+
+.room__info h2 {
+  @include font($ff-roboto, 700, 24px, $color-default-white, 32px);
+  margin-bottom: 9px;
+  // margin-top: 167px;
+
+  @include vp-1279 {
+    // font-size: 20px;
+    // line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &:active {
+    color: $color-half-white;
+  }
+}
+
+.room__info p {
+  @include font($ff-open-sans, 400, 16px, $color-default-white, 24px);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 21px; /* 130% */
+  }
+}
+
+.room__info::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: $color-dark-white;
+  margin: 16px 0 0 0; // fact - mt -20
+
+  @include vp-1279 {
+    // margin-top: 44px; // for pp
+  }
+
+  @include vp-767 {
+    margin-top: 21px;
+    margin-bottom: -6px;
+    // margin-top: 44px; // for pp
+  }
+}
+
+.room__info-link {
+  &:hover {
+    color: $color-default-white;
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}

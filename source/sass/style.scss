@@ -1,16 +1,19 @@
+// @import "vendor/normalize";
+
 @import "variables";
 @import "mixins";
 @import "global/fonts";
 @import "global/reboot";
-@import "global/utils";
+// @import "global/utils";
 @import "global/container";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/button";
+@import "blocks/header";
+@import "blocks/room";
+@import "blocks/room-info";
+@import "blocks/room-booking";
+@import "blocks/room-booked";
 
