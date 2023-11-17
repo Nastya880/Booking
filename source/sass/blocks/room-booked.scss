@@ -4,8 +4,7 @@
   min-height: 96px;
   justify-content: center;
   margin-top: 8%;
-  // display: flex;
-  flex-direction: column;
+  // display: grid;
   display: none;
 }
 
@@ -22,7 +21,7 @@
   &:visited {
     color: $color-illusion;
   }
-  
+
   &:hover {
     text-decoration: underline;
   }

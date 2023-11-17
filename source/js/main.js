@@ -10,7 +10,7 @@ rooms.forEach((room) => {
   const roomMotivator = room.querySelector('.room__motivator');
   const roomBooked = room.querySelector('.room__booked');
 
-  const toggleBookingToBooked = (booking = 'flex', booked = 'flex', infoRemove = 'room__info', infoAdd = 'room__info-without-line', motivator = 'none', darkRoomContent = true) => {
+  const toggleBookingToBooked = (booking = 'flex', booked = 'grid', infoRemove = 'room__info', infoAdd = 'room__info-without-line', motivator = 'none', darkRoomContent = true) => {
     roomBooking.style.display = booking;
     roomBooked.style.display = booked;
     if (roomMotivator) {
