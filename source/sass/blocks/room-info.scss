@@ -1,4 +1,5 @@
-.room__info {
+.room__info,
+.room__info-without-line {
   // background-color: red;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,7 @@
   }
 }
 
-.room__info h2 {
+.room__info-link h2 {
   @include font($ff-roboto, 700, 24px, $color-default-white, 32px);
   margin-bottom: 9px;
   // margin-top: 167px;
@@ -35,7 +36,8 @@
   }
 }
 
-.room__info p {
+.room__info p,
+.room__info-without-line p {
   @include font($ff-open-sans, 400, 16px, $color-default-white, 24px);
 
   @include vp-767 {

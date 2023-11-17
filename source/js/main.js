@@ -1,50 +1,42 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+const rooms = document.querySelectorAll('.room__item');
 
-// ---------------------------------
+rooms.forEach((room) => {
+  let toClickRoomBookingButton = false;
 
-window.addEventListener('DOMContentLoaded', () => {
+  const roomBookingButton = room.querySelector('.room__booking-button');
+  const roomBooking = room.querySelector('.room__booking');
+  const roomInfo = room.querySelector('.room__info');
+  const roomContent = room.querySelector('.room__content');
+  const roomMotivator = room.querySelector('.room__motivator');
+  const roomBooked = room.querySelector('.room__booked');
 
-  // Utils
-  // ---------------------------------
+  const toggleBookingToBooked = (booking = 'flex', booked = 'flex', infoRemove = 'room__info', infoAdd = 'room__info-without-line', motivator = 'none', darkRoomContent = true) => {
+    roomBooking.style.display = booking;
+    roomBooked.style.display = booked;
+    // motivator = roomMotivator && roomMotivator.style.display;
+    if (roomMotivator) {
+      roomMotivator.style.display = motivator;
+    }
+    roomInfo.classList.remove(infoRemove);
+    roomInfo.classList.add(infoAdd);
+    roomContent.classList.toggle = darkRoomContent ? roomContent.classList.add('is-dark-content') : roomContent.classList.remove('is-dark-content');
+  };
 
-  iosVhFix();
+  roomBookingButton.addEventListener('click', () => {
+    toClickRoomBookingButton = true;
+  });
 
-  // Modules
-  // ---------------------------------
+  room.addEventListener('mouseout', () => {
+    if (toClickRoomBookingButton) {
+      toggleBookingToBooked('none');
+    }
+  });
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
+  room.addEventListener('click', () => {
+    if (roomBooking.style.display === 'none') {
+      // console.log(roomBooking.style.display);
+      toClickRoomBookingButton = false;
+      toggleBookingToBooked('flex', 'none', 'room__info-without-line', 'room__info', 'flex', false);
+    }
   });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

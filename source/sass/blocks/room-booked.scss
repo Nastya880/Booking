@@ -1,10 +1,20 @@
 .room__booked {
-  min-height: 96px;
-  padding: 25px 105px 29px 105px;
+  // padding: 25px 105px 29px 105px;
+  padding: 25px 24px;
   background-color: $color-vulcan;
-  @include font($ff-open-sans, 400, 14px, $color-default-white, 21px);
+  min-height: 96px;
+  justify-content: center;
+  margin-top: 8%;
+
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.room__booked p,
+.room__booked h3 {
   text-align: center;
-  // display: none;
+  @include font($ff-open-sans, 400, 14px, $color-default-white, 21px);
 }
 
 .room__booked-link {
