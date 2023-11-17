@@ -11,6 +11,8 @@
 
   @include vp-767 {
     // border: 10px solid green;
+    // padding-bottom: 0;//
+    // margin-bottom: 0;//
   }
 }
 
@@ -34,10 +36,17 @@
   }
 
   @include vp-767 {
+    margin-bottom: 32px;
     width: 288px;
     min-height: 347px;
+    height: 347px;
+    // height: min-content;
     background: #000;
-    padding-bottom: 0;
+
+    // margin-bottom: 21px;
+    // padding-bottom: 21px;
+    // padding-bottom: 0;
+    // margin-bottom: 0;///
   }
 
   & picture {

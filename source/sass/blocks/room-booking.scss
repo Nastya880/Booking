@@ -3,9 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
+  margin-bottom: -5px;
   height: auto;
 
   @include vp-1279 {
+    margin-bottom: 0;
     min-height: 160px;
     flex-direction: column;
     align-items: stretch;
@@ -19,8 +21,8 @@
     align-items: flex-start;
     height: auto;
     padding: 21px;
-    padding-top: 3px;
-    padding-bottom: 47px; //for PP
+    padding-top: 27px;
+    padding-bottom: 21px; //for PP
     // margin-bottom: -2px;
   }
 }
