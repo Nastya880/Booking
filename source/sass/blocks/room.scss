@@ -19,8 +19,11 @@
 .room__item {
   position: relative;
   width: 372px;
-  display: block;
+  // display: block;
+  min-height: 372px;
+  // height: max-content;
   // height: 372px;
+  height: auto;
   // min-height: min-content;
   overflow: hidden;
   // flex-shrink: 1;
@@ -31,7 +34,7 @@
   display: flex;
   align-items: flex-end;
 
-  word-wrap: break-wrap;
+  word-wrap: break-word;
 
   @include vp-1279 {
     min-height: 420px;
@@ -66,28 +69,64 @@
   }
 }
 
-.room__content {
+// .room__content {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background: $grey-to-black;
+//   width: 100%;
+//   // height: 100%;
+//   height: auto;
+
+//   color: $color-default-white;
+//   display: flex;
+//   flex-direction: column;
+//   // align-items: flex-end;
+//   justify-content: flex-end;
+// }
+
+.room__wrapper {
   position: absolute;
   top: 0;
   left: 0;
   background: $grey-to-black;
   width: 100%;
   height: 100%;
+  // height: fit-content;
+  display: flex;
+  align-items: flex-end;
+  // word-wrap: break-wrap;
+  // word-wrap: break-word;
 
+}
+
+.room__content {
   color: $color-default-white;
   display: flex;
   flex-direction: column;
-  // align-items: flex-end;
   justify-content: flex-end;
+  height: fit-content;
+  width: 100%;
+  // height: 100%;
+  // height: min-content;
+  // height: 300px;
+  // flex-wrap: wrap;
+  word-wrap: break-word;
 }
 
 .room__motivator {
   width: 213px; //177+36
   height: 30px;
-  margin-bottom: auto;
-  margin-top: 8%;
+  // margin-bottom: auto;
+  // margin-top: 1%;
+  margin-bottom: 32%;
+  // margin-top: -30%;
   background: url("../../img/svg/icon-discount.svg") no-repeat;
   visibility: hidden;
+
+  @include vp-767 {
+    margin-bottom: 18%;
+  }
 }
 
 .is-dark-content {

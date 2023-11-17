@@ -6,7 +6,7 @@ rooms.forEach((room) => {
   const roomBookingButton = room.querySelector('.room__booking-button');
   const roomBooking = room.querySelector('.room__booking');
   const roomInfo = room.querySelector('.room__info');
-  const roomContent = room.querySelector('.room__content');
+  const roomWrapper = room.querySelector('.room__wrapper');
   const roomMotivator = room.querySelector('.room__motivator');
   const roomBooked = room.querySelector('.room__booked');
 
@@ -19,7 +19,8 @@ rooms.forEach((room) => {
     }
     roomInfo.classList.remove(infoRemove);
     roomInfo.classList.add(infoAdd);
-    roomContent.classList.toggle = darkRoomContent ? roomContent.classList.add('is-dark-content') : roomContent.classList.remove('is-dark-content');
+    // roomContent.classList.toggle = darkRoomContent ? roomContent.classList.add('is-dark-content') : roomContent.classList.remove('is-dark-content');
+    roomWrapper.classList.toggle = darkRoomContent ? roomWrapper.classList.add('is-dark-content') : roomWrapper.classList.remove('is-dark-content');
   };
 
   roomBookingButton.addEventListener('click', () => {
