@@ -25,7 +25,15 @@ body {
   min-height: 100vh;
   background: -webkit-image-set(url("../img/bg.webp") 1x, url("../img/bg@2x.webp") 2x, url("../img/bg.png") 1x, url("../img/bg@2x.png") 2x) no-repeat center fixed;
   background: image-set(url("../img/bg.webp") 1x, url("../img/bg@2x.webp") 2x, url("../img/bg.png") 1x, url("../img/bg@2x.png") 2x) no-repeat center fixed;
+  background-color: linear-gradient(69deg, rgba(170, 203, 240, 0.25) 11.33%, rgba(170, 203, 240, 0.75) 64.1%);
   background-size: cover;
+}
+@media (max-width: 767px) {
+  body {
+    background-color: #000000;
+    background-position: top;
+    background-size: 100% 544px;
+  }
 }
 
 .container {
@@ -62,20 +70,13 @@ body {
 .button {
   border: none;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
-.button:disabled {
-  opacity: 0.5;
-  pointer-events: none;
+.button:hover {
+  background-color: #D8003F;
 }
-@media (hover: hover) {
-  .button:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-}
-.button.focus-visible:focus {
-  opacity: 0.8;
+.button:active {
+  color: #F9637C;
+  background-color: #D8003F;
 }
 
 header {

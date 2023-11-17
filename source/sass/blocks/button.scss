@@ -1,14 +1,13 @@
 .button {
   border: none;
   cursor: pointer;
-  transition: opacity $trans-default;
 
-  &:disabled {
-    opacity: 0.5;
-    pointer-events: none;
+  &:hover {
+    background-color: $color-crimson;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &:active {
+    color: $color-brink-pink;
+    background-color: $color-crimson;
   }
 }
