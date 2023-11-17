@@ -19,15 +19,19 @@
 .room__item {
   position: relative;
   width: 372px;
-  height: 372px;
-
+  display: block;
+  // height: 372px;
+  // min-height: min-content;
   overflow: hidden;
+  // flex-shrink: 1;
   border-radius: 10px;
 
   margin-right: 32px;
   margin-bottom: 37px;
   display: flex;
   align-items: flex-end;
+
+  word-wrap: break-wrap;
 
   @include vp-1279 {
     min-height: 420px;
@@ -50,8 +54,11 @@
   }
 
   & picture {
+    background-color: $color-vulcan;
     width: 100%;
     height: 100%;
+    // height: fit-content;
+    // height: auto;
   }
 
   &:hover .room__motivator{

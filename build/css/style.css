@@ -134,7 +134,7 @@ header h1 {
 .room__item {
   position: relative;
   width: 372px;
-  height: 372px;
+  display: block;
   overflow: hidden;
   border-radius: 10px;
   margin-right: 32px;
@@ -145,6 +145,7 @@ header h1 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  word-wrap: break-wrap;
 }
 @media (max-width: 1279px) {
   .room__item {
@@ -163,6 +164,7 @@ header h1 {
   }
 }
 .room__item picture {
+  background-color: #3c3e43;
   width: 100%;
   height: 100%;
 }
@@ -218,6 +220,7 @@ header h1 {
           justify-content: flex-end;
   height: 100%;
   padding: 0 26px 0 24px;
+  word-wrap: break-word;
 }
 @media (max-width: 1279px) {
   .room__info,
@@ -310,6 +313,7 @@ header h1 {
   padding: 24px;
   margin-bottom: -5px;
   height: auto;
+  word-wrap: break-word;
 }
 @media (max-width: 1279px) {
   .room__booking {
@@ -336,11 +340,14 @@ header h1 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: auto;
     padding: 21px;
     padding-top: 27px;
     padding-bottom: 21px;
   }
+}
+
+.room__booking-price {
+  max-width: 100%;
 }
 
 .room__booking-price h3 {
