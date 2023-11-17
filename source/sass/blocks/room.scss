@@ -1,0 +1,87 @@
+.room__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left: 25px;
+
+  @include vp-1279 {
+    margin-left: 32px;
+  }
+
+  @include vp-767 {
+    margin-left: 39px;
+  }
+}
+
+.room__item {
+  position: relative;
+  width: 372px;
+  min-height: 372px;
+  overflow: hidden; // delete for overflow
+  border-radius: 10px;
+  margin-right: 32px;
+  margin-bottom: 37px;
+  display: flex;
+  align-items: flex-end;
+  word-wrap: break-word;
+
+  @include vp-1279 {
+    min-height: 420px;
+    width: 336px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 32px;
+    width: 288px;
+    min-height: 347px;
+    height: 347px;
+  }
+
+  & picture {
+    background-color: $color-vulcan;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover .room__motivator {
+    visibility: visible;
+  }
+}
+
+.room__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $grey-to-black;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.room__content {
+  color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: fit-content;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.room__motivator {
+  width: 213px;
+  height: 30px;
+  margin-bottom: 32%;
+  background: url("../img/svg/icon-discount.svg") no-repeat;
+  visibility: hidden;
+
+  @include vp-767 {
+    margin-bottom: 18%;
+  }
+}
+
+.is-dark-content {
+  background-color: $color-no-active-white;
+}
