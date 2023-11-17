@@ -80,7 +80,10 @@ body {
 }
 
 header {
+  display: block;
+  max-width: 100%;
   margin-bottom: 21px;
+  word-wrap: break-word;
 }
 @media (max-width: 1279px) {
   header {
@@ -131,6 +134,7 @@ header h1 {
     margin-left: 29px;
   }
 }
+
 .room__item {
   position: relative;
   width: 372px;
@@ -152,7 +156,6 @@ header h1 {
   .room__item {
     min-height: 420px;
     width: 336px;
-    margin-right: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -161,7 +164,6 @@ header h1 {
     width: 288px;
     min-height: 347px;
     height: 347px;
-    background: #000;
   }
 }
 .room__item picture {
@@ -212,7 +214,7 @@ header h1 {
   width: 213px;
   height: 30px;
   margin-bottom: 32%;
-  background: url("../../img/svg/icon-discount.svg") no-repeat;
+  background: url("../img/svg/icon-discount.svg") no-repeat;
   visibility: hidden;
 }
 @media (max-width: 767px) {
@@ -285,7 +287,7 @@ header h1 {
   .room__info p,
 .room__info-without-line p {
     font-size: 14px;
-    line-height: 21px; /* 130% */
+    line-height: 21px;
   }
 }
 
@@ -345,9 +347,7 @@ header h1 {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    padding-top: 17px;
-    padding-left: 25px;
-    padding-bottom: 25px;
+    padding: 17px 24px 25px 25px;
   }
 }
 @media (max-width: 767px) {
@@ -361,7 +361,6 @@ header h1 {
             align-items: flex-start;
     padding: 21px;
     padding-top: 27px;
-    padding-bottom: 21px;
   }
 }
 
@@ -379,7 +378,7 @@ header h1 {
 @media (max-width: 767px) {
   .room__booking-price h3 {
     font-size: 14px;
-    line-height: 21px; /* 150% */
+    line-height: 21px;
   }
 }
 
@@ -393,7 +392,7 @@ header h1 {
 @media (max-width: 767px) {
   .room__booking-price p {
     font-size: 17px;
-    line-height: 24px; /* 141.176% */
+    line-height: 24px;
   }
 }
 .room__booking-price p :first-child {
@@ -420,18 +419,18 @@ header h1 {
 }
 
 .room__booking-button {
-  display: block;
-  width: 180px;
-  height: 48px;
-  border-radius: 5px;
-  background-color: #f91155;
-  border: none;
   font-weight: 700;
   font-size: 16px;
   font-family: "OpenSans", "Arial", sans-serif;
   color: #ffffff;
   line-height: 24px;
   text-align: center;
+  display: block;
+  width: 180px;
+  min-height: 48px;
+  border-radius: 5px;
+  background-color: #f91155;
+  border: none;
 }
 @media (max-width: 1279px) {
   .room__booking-button {
@@ -441,7 +440,7 @@ header h1 {
 @media (max-width: 767px) {
   .room__booking-button {
     font-size: 14px;
-    height: 42px;
+    min-height: 42px;
   }
 }
 
@@ -453,9 +452,6 @@ header h1 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -465,12 +461,12 @@ header h1 {
 
 .room__booked p,
 .room__booked h3 {
-  text-align: center;
   font-weight: 400;
   font-size: 14px;
   font-family: "OpenSans", "Arial", sans-serif;
   color: #ffffff;
   line-height: 21px;
+  text-align: center;
 }
 
 .room__booked-link {

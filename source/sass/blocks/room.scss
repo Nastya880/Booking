@@ -8,38 +8,25 @@
   @include vp-1279 {
     margin-left: 29px;
   }
-
-  @include vp-767 {
-    // border: 10px solid green;
-    // padding-bottom: 0;//
-    // margin-bottom: 0;//
-  }
 }
 
 .room__item {
   position: relative;
   width: 372px;
-  // display: block;
   min-height: 372px;
-  // height: max-content;
-  // height: 372px;
   height: auto;
-  // min-height: min-content;
   overflow: hidden;
-  // flex-shrink: 1;
   border-radius: 10px;
-
+  // margin-top: auto;
   margin-right: 32px;
   margin-bottom: 37px;
   display: flex;
   align-items: flex-end;
-
   word-wrap: break-word;
 
   @include vp-1279 {
     min-height: 420px;
     width: 336px;
-    margin-right: 32px;
   }
 
   @include vp-767 {
@@ -47,43 +34,18 @@
     width: 288px;
     min-height: 347px;
     height: 347px;
-    // height: min-content;
-    background: #000;
-
-    // margin-bottom: 21px;
-    // padding-bottom: 21px;
-    // padding-bottom: 0;
-    // margin-bottom: 0;///
   }
 
   & picture {
     background-color: $color-vulcan;
     width: 100%;
     height: 100%;
-    // height: fit-content;
-    // height: auto;
   }
 
   &:hover .room__motivator{
     visibility: visible;
   }
 }
-
-// .room__content {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   background: $grey-to-black;
-//   width: 100%;
-//   // height: 100%;
-//   height: auto;
-
-//   color: $color-default-white;
-//   display: flex;
-//   flex-direction: column;
-//   // align-items: flex-end;
-//   justify-content: flex-end;
-// }
 
 .room__wrapper {
   position: absolute;
@@ -92,12 +54,8 @@
   background: $grey-to-black;
   width: 100%;
   height: 100%;
-  // height: fit-content;
   display: flex;
   align-items: flex-end;
-  // word-wrap: break-wrap;
-  // word-wrap: break-word;
-
 }
 
 .room__content {
@@ -107,21 +65,15 @@
   justify-content: flex-end;
   height: fit-content;
   width: 100%;
-  // height: 100%;
-  // height: min-content;
-  // height: 300px;
-  // flex-wrap: wrap;
   word-wrap: break-word;
+  // margin-top: auto;
 }
 
 .room__motivator {
   width: 213px; //177+36
   height: 30px;
-  // margin-bottom: auto;
-  // margin-top: 1%;
   margin-bottom: 32%;
-  // margin-top: -30%;
-  background: url("../../img/svg/icon-discount.svg") no-repeat;
+  background: url("../img/svg/icon-discount.svg") no-repeat;
   visibility: hidden;
 
   @include vp-767 {

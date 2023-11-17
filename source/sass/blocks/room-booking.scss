@@ -4,12 +4,7 @@
   align-items: center;
   padding: 24px;
   margin-bottom: -5px;
-  // min-height: 96px;
   height: auto;
-
-  // width: 100%;
-  // background-color: #fff;
-  // flex-wrap: wrap;
   word-wrap: break-word;
 
   @include vp-1279 {
@@ -18,9 +13,7 @@
     // height: auto;
     flex-direction: column;
     align-items: stretch;
-    padding-top: 17px;
-    padding-left: 25px;
-    padding-bottom: 25px;
+    padding: 17px 24px 25px  25px;
   }
 
   @include vp-767 {
@@ -29,35 +22,28 @@
     // height: auto;
     padding: 21px;
     padding-top: 27px;
-    padding-bottom: 21px; //for PP
-    // margin-bottom: -2px;
   }
 }
 
 .room__booking-price {
-  max-width: 100%; ////
+  max-width: 100%;
 }
 
 .room__booking-price h3 {
   @include font($ff-open-sans, 700, 16px, $color-default-white, 24px);
-  // display: block;
-  // max-width: 100%;
-
 
   @include vp-767 {
     font-size: 14px;
-    line-height: 21px; /* 150% */
+    line-height: 21px;
   }
 }
 
 .room__booking-price p {
   @include font($ff-roboto, 700, 19px, $color-default-white, 24px);
-  // word-wrap: break-word;
-  // display: block;
-  // max-width: 100%;
+
   @include vp-767 {
     font-size: 17px;
-    line-height: 24px; /* 141.176% */
+    line-height: 24px;
   }
 
   :first-child {
@@ -72,7 +58,7 @@
 
   :last-child {
     color: $color-nobel;
-    font-family: $ff-open-sans; /////////
+    font-family: $ff-open-sans;
     font-size: 23px;
     line-height: 32px;
     font-weight: 400;
@@ -84,15 +70,14 @@
 }
 
 .room__booking-button {
-  // padding: 9px 24px 13px 33px; //in fact - 11px 24px 13px 25px
+  @include font($ff-open-sans, 700, 16px, $color-default-white, 24px);
+  text-align: center;
   display: block;
   width: 180px;
-  height: 48px;
+  min-height: 48px;
   border-radius: 5px;
   background-color: $color-razzmatazz;
   border: none;
-  @include font($ff-open-sans, 700, 16px, $color-default-white, 24px);
-  text-align: center;
 
   @include vp-1279 {
     width: 100%;
@@ -100,6 +85,6 @@
 
   @include vp-767 {
     font-size: 14px;
-    height: 42px;
+    min-height: 42px;
   }
 }

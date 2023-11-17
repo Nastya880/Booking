@@ -1,5 +1,8 @@
 header {
-  margin-bottom: 21px; // in fact - 33px
+  display: block;
+  max-width: 100%;
+  margin-bottom: 21px;
+  word-wrap: break-word;
 
   @include vp-1279 {
     margin-bottom: 26px;
@@ -16,7 +19,6 @@ header h1 {
   @include font($ff-roboto, 500, 36px, $color-default-black, 55px);
   text-align: center;
   text-transform: uppercase;
-  // margin: 0;
 
   @include vp-767 {
     @include font($ff-roboto, 700, 24px, $color-default-black, 32px);
