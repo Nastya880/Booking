@@ -20,6 +20,7 @@
   min-height: 372px;
   overflow: hidden; // delete for overflow
   border-radius: 10px;
+  // flex-basis: min-content;
   margin-right: 32px;
   margin-bottom: 37px;
   display: flex;
@@ -57,6 +58,7 @@
   width: 100%;
   min-height: 100%;
   display: flex;
+  border-radius: 10px;
   align-items: flex-end;
 }
 
